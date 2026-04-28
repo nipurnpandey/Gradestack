@@ -1,0 +1,520 @@
+:root {
+    --bg-gradient-from: #f0f7ff;
+    --bg-gradient-via: #ffffff;
+    --bg-gradient-to: #e6efff;
+
+    --card-bg: rgba(255, 255, 255, 0.9);
+
+    --text-primary: #1f2937;
+    --text-secondary: #374151;
+    --text-muted: #6b7280;
+
+    --border-color: #dbeafe;
+    --input-bg: #ffffff;
+
+    --error-color: #ef4444;
+
+    /* MAIN PAGE BLUE */
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-800: #1e40af;
+
+    /* PURPLE = SAME BLUE (NO DESIGN CHANGE) */
+    --purple-600: #2563eb;
+    --purple-700: #1d4ed8;
+    --purple-800: #1e40af;
+
+    /* Soft premium glow shadows */
+--shadow-md: 0 6px 14px rgba(37,99,235,0.12);
+--shadow-lg: 0 14px 28px rgba(37,99,235,0.18);
+--shadow-xl: 0 22px 45px rgba(37,99,235,0.22);
+--shadow-2xl: 0 30px 60px rgba(37,99,235,0.28);
+}
+
+
+.dark {
+    --bg-gradient-from: #0f172a;
+    --bg-gradient-via: #020617;
+    --bg-gradient-to: #062094;
+
+    --card-bg: rgba(15, 23, 42, 0.9);
+
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+
+    --border-color: #1e293b;
+    --input-bg: #020617;
+
+    --purple-600: #3b82f6;
+    --purple-700: #2563eb;
+    --purple-800: #1d4ed8;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, var(--bg-gradient-from) 0%, var(--bg-gradient-via) 50%, var(--bg-gradient-to) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: background 0.3s ease;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-xl);
+}
+
+.theme-toggle .icon {
+    color: var(--text-primary);
+}
+
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+.dark .theme-toggle .moon-icon {
+    display: none;
+}
+
+.dark .theme-toggle .sun-icon {
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 448px;
+}
+
+.auth-wrapper {
+    width: 100%;
+}
+
+.branding {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 0.6s ease;
+}
+
+.logo-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue-600), var(--blue-700));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.graduation-icon {
+    color: white;
+}
+
+.brand-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--purple-600), var(--purple-800));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.brand-subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.auth-card {
+    background: var(--card-bg);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-2xl);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    animation: slideUp 0.5s ease;
+}
+
+.card-header {
+    padding: 1.5rem 1.5rem 0.5rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.label-icon {
+    color: var(--text-secondary);
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    font-size: 0.875rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background: var(--input-bg);
+    color: var(--text-primary);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--purple-600);
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+}
+
+.form-input.error {
+    border-color: var(--error-color);
+}
+
+.error-message {
+    display: block;
+    color: var(--error-color);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    min-height: 1rem;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper .form-input {
+    padding-right: 2.5rem;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: var(--text-secondary);
+}
+
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+}
+
+.checkbox-input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--purple-600);
+}
+
+.checkbox-custom {
+    display: none;
+}
+
+.forgot-link {
+    background: none;
+    border: none;
+    color: var(--purple-600);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+    color: var(--purple-700);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--purple-600), var(--purple-700));
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, var(--purple-700), var(--purple-800));
+    box-shadow: var(--shadow-xl);
+    transform: scale(1.02);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Loader */
+.loader {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+/* Toggle Mode */
+.toggle-mode {
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.toggle-text {
+    color: var(--text-secondary);
+}
+
+.toggle-link {
+    background: none;
+    border: none;
+    color: var(--purple-600);
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.toggle-link:hover {
+    color: var(--purple-700);
+}
+
+/* Footer Note */
+.footer-note {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+}
+
+.toast-container {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 400px;
+}
+
+.toast {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--shadow-xl);
+    animation: slideInRight 0.3s ease;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.toast.success {
+    border-left: 4px solid #10b981;
+}
+
+.toast.error {
+    border-left: 4px solid var(--error-color);
+}
+
+.toast-header {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.toast-message {
+    color: var(--text-secondary);
+    font-size: 0.8125rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 640px) {
+    .auth-card {
+        margin: 0;
+    }
+
+    .card-header,
+    .card-content,
+    .card-footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .brand-title {
+        font-size: 2rem;
+    }
+
+    .toast-container {
+        left: 1rem;
+        right: 1rem;
+        max-width: none;
+    }
+}
+
+/* ===== PREMIUM EFFECTS (SAFE) ===== */
+
+/* Card floating feel */
+.auth-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.auth-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Button premium hover */
+.submit-btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.submit-btn:hover:not(:disabled) {
+    transform: scale(1.03);
+}
+
+/* Theme toggle smooth hover */
+.theme-toggle {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.theme-toggle:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Logo soft glow (very light) */
+.logo-circle {
+    box-shadow: 0 0 0 rgba(37,99,235,0);
+}
+

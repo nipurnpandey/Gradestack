@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Notes | GradStack</title>
+    <style>
+        :root {
+            --primary-blue: #3b82f6;
+            --bg-color: #f1f5f9;
+            --text-dark: #0f172a;
+            --text-gray: #64748b;
+            --success-green: #10b981;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+        }
+
+        /* Hero Section matches your dashboard */
+        .hero {
+            background: linear-gradient(to right, #050a18, #11224d);
+            color: white;
+            padding: 60px 8%;
+            text-align: left;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        .hero p {
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        /* Grid Container for 2-column layout */
+        .notes-grid {
+            padding: 60px 10%;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(600px, 2fr));
+            gap: 25px;
+
+        }
+
+        /* Unit Card Styling */
+        .unit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .unit-card h2 {
+            margin: 0 0 5px 0;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+        }
+
+        .unit-card .topics {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .unit-card:hover {
+            transform: translateY(-6px);
+            border-color: #3b82f6;
+        }
+
+        /* Button Styling */
+        .button-container {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .view-btn {
+            background-color: #eff6ff;
+            color: var(--primary-blue);
+            border: 1px solid #dbeafe;
+        }
+
+        .view-btn:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .download-btn {
+            background-color: var(--success-green);
+            color: white;
+            border: 1px solid var(--success-green);
+        }
+
+        .download-btn:hover {
+            background-color: #059669;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 850px) {
+            .notes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 0.9rem;">← Back to Dashboard</a>
+        <h1 style="margin-top: 15px;">C Programming Notes</h1>
+        <p>Unit-wise comprehensive notes for BCA Semester 1.</p>
+    </header>
+
+    <main class="notes-grid">
+
+        <div class="unit-card">
+            <h2>Unit 1: Fundamentals of C programming and Control Structures</h2>
+            <p class="topics">History, Structure of C, Constants, Operators, and Control Structures (Switch, Loops,
+                Nested statements).</p>
+            <div class="button-container">
+                <a href="unit1.docx" target="_blank" class="btn view-btn">View PDF</a>
+                <a href="unit1.docx" download class="btn download-btn">Download</a>
+            </div>
+        </div>
+
+        <div class="unit-card">
+            <h2>Unit 2: Arrays and Functions</h2>
+            <p class="topics">Declaration and Initialization of Arrays, String manipulation, Function definitions, and
+                Recursive functions.</p>
+            <div class="button-container">
+                <a href="unit2.docx" target="_blank" class="btn view-btn">View PDF</a>
+                <a href="unit2.docx" download class="btn download-btn">Download</a>
+            </div>
+        </div>
+
+        <div class="unit-card">
+            <h2>Unit 3: Structures and Storage Classes</h2>
+            <p class="topics">Introduction to Structures, Nested structures, Array of structures, and Storage classes
+                (Auto, Register, Static, External).</p>
+            <div class="button-container">
+                <a href="unit3.docx" target="_blank" class="btn view-btn">View PDF</a>
+                <a href="unit3.docx" download class="btn download-btn">Download</a>
+            </div>
+        </div>
+
+        <div class="unit-card">
+            <h2>Unit 4: Pointers</h2>
+            <p class="topics">Pointer characteristics, Pointer arithmetic, Call by reference, and Passing pointers to
+                functions.</p>
+            <div class="button-container">
+                <a href="unit4.docx" target="_blank" class="btn view-btn">View PDF</a>
+                <a href="unit4.docx" download class="btn download-btn">Download</a>
+            </div>
+        </div>
+
+        <div class="unit-card">
+            <h2>Unit 5: Dynamic Memory Allocation and File Handling</h2>
+            <p class="topics">Library functions (malloc, calloc, realloc), File operations, File pointers, and Command
+                line arguments.</p>
+            <div class="button-container">
+                <a href="unit5.docx" target="_blank" class="btn view-btn">View PDF</a>
+                <a href="unit5.docx" download class="btn download-btn">Download</a>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

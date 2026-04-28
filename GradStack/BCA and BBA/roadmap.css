@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+.hero {
+  padding: 80px 10%;
+  background:radial-gradient(circle at top left, #1a46c1 0, #0f172a 55%),
+        #0f172a;
+  color: white;
+
+}
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.hero p, .info{
+  margin-left: 67px;
+  font-weight: bold;
+}
+
+.hero p{
+  margin-bottom: 20px;
+  color: #cbd5f5;
+}
+.info span {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ROADMAP */
+.roadmap {
+  padding: 60px 10%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(600px, 2fr));
+  gap: 25px;
+ 
+}
+.semester {
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.35);;
+  padding: 25px;
+  border-radius: 14px;
+  transition: 0.3s;
+  border-left: 4px solid #2563eb;
+}
+
+.semester:hover {
+  transform: translateY(-6px);
+  border-color: #3b82f6;
+}
+
+.semester h2 {
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+
+.semester p {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.btn {
+  text-decoration: none;
+  color: #126fe2;
+  font-weight: 500;
+}
+
+.primary {
+  background: #2563eb;
+  padding:5px 25px;
+  border-radius: 25px;
+  color: white; 
+}
+
+/* USE SECTION */
+.use {
+  padding: 60px 10%;
+  background: #e5ecf5;
+  color: #0d1724;
+}
+
+.use h2 {
+  margin-bottom: 20px;
+}
+.use ul li {
+  margin-bottom: 10px;
+  color: #1b2957;
+}
+
+/* CTA */
+.cta {
+  margin-top:2rem;
+  padding: 60px 10%;
+  text-align: center;
+  background: #020617;
+  color: #e5ecf5;
+}
+.st-btn{
+  margin-top: 8px;
+}
+.cta h2{
+  margin-bottom: 26px;
+}
+
+/* RESPONSIVENESS STARTS */
+/* ========================= */
+
+/* Tablets & small laptops */
+@media (max-width: 1200px) {
+  .roadmap {
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+  }
+
+  .hero p,
+  .info {
+    margin-left: 0;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .hero {
+    padding: 60px 6%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p,
+  .info {
+    margin-left: 0;
+  }
+
+  .info span {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .roadmap {
+    padding: 40px 5%;
+    gap: 18px;
+  }
+
+  .semester {
+    padding: 20px;
+  }
+
+  .use,
+  .cta {
+    padding: 40px 5%;
+  }
+
+  .use h2,
+  .cta h2 {
+    font-size: 22px;
+  }
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  position: sticky;
+  padding: 16px 10%;
+  background: #020617;
+  color: #e5ecf5;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.logo {
+  font-size: 22px;
+}
+
+.brand-name {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+

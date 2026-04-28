@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>GradStack - BCA & BBA Exam Prep</title>
+    <!--<link rel="stylesheet" href="assets/css/style.css" />-->
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <header class="navbar">
+        <div class="container nav-content">
+
+             <!-- LEFT -->
+            <div class="nav-left">
+            <div class="menu-icon" onclick="openMenu()">☰</div>
+
+            <div class="logo">
+                <!-- Text logo, later yahan image laga sakta hai -->
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">GradStack</span>
+            </div>
+            </div>
+
+
+            <!-- RIGHT -->
+                 <div class="nav-right">
+            <nav class="nav-links nav-right">
+                <a href="#hero">Home</a>
+                <a href="#resources">PYQs</a>
+                <a href="#resources">Notes</a>
+                <a href="#resources">Practice</a>
+                <a href="#search">Search</a>
+                <a href="About Us/index.html">About Us</a>
+                <a href="Login Page/login.html" class="btn-outline nav-login">Login</a>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- OVERLAY -->
+<div id="overlay" onclick="closeMenu()"></div>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <div class="sidebar-header">
+    <h3>Your Account</h3>
+    <span onclick="closeMenu()">✕</span>
+  </div>
+
+  <ul>
+    <li><strong>Trending</strong></li>
+    <li>Bestsellers</li>
+    <li>New Releases</li>
+    <li>Movers & Shakers</li>
+
+    <li class="divider"></li>
+
+    <li><strong>Top Categories</strong></li>
+    <li><a href="BCA and BBA/bca_resources.html">BCA Resources</a></li>
+    <li><a href="BCA and BBA/bba_resources.html">BBA Resources</a></li>
+    <li>Practice Zone</li>
+    <li>Progress Tracker</li>
+
+    <li class="divider"></li>
+
+    <li><strong>Quick Links</strong></li>
+    <li><a href="Login Page/login.html">Login</a></li>
+    <li><a href="About Us/index.html">About Us</a></li>
+  </ul>
+</div>
+
+
+
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="hero" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>One Platform for BCA & BBA Exam Preparation</h1>
+                <p>
+                    Access Previous Year Question Papers, structured notes, and
+                    practice sets – all organized by course, semester, and subject.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn-primary">Explore BCA</a>
+                    <a href="#courses" class="btn-secondary">Explore BBA</a>
+                </div>
+                <p class="hero-mini">
+                    Progress tracking & smart analytics coming soon. Slow build, faadu results 🚀
+                </p>
+            </div>
+
+            <div class="hero-visual">
+                <div class="dashboard-card">
+                    <h3>Today’s Focus</h3>
+                    <ul>
+                        <li>C Programming – Unit 2 PYQs</li>
+                        <li>Management – Short Notes</li>
+                        <li>Practice – 25 MCQs</li>
+                    </ul>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="progress-text">65% plan completed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COURSES SECTION ========== -->
+    <section id="courses" class="section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Course</h2>
+            <p class="section-subtitle">
+                Start with your program and drill down to semesters and subjects.
+            </p>
+
+            <div class="card-grid two">
+                <article class="card course-card">
+                    <h3>BCA</h3>
+                    <p>All semesters from 1 to 6 with PYQs, notes and practice sets.</p>
+                    <a href="BCA and BBA/bca_roadmap.html" class="card-link">View BCA roadmap →</a>
+                </article>
+
+                <article class="card course-card">
+                    <h3>BBA</h3>
+                    <p>Organized content for every semester, optimized for exams.</p>
+                    <a href="BCA and BBA/bba_roadmap.html" class="card-link">View BBA roadmap →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RESOURCES SECTION ========== -->
+    <section id="resources" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Study Resources</h2>
+            <p class="section-subtitle">
+                Everything you need in one place – no random Google hunt.
+            </p>
+
+            <div class="card-grid four">
+                <article class="card resource-card">
+                    <h3>Previous Year Question Papers</h3>
+                    <p>Year-wise and subject-wise PDFs for quick revision.</p>
+                    <span class="tag">PYQs</span>
+                </article>
+
+                <article class="card resource-card">
+                    <h3>Modules / Notes</h3>
+                    <p>Clean, exam-oriented notes for every unit and chapter.</p>
+                    <span class="tag">Notes</span>
+                </article>
+
+                <article class="card resource-card">
+                    <h3>Practice Sets + Answers</h3>
+                    <p>MCQs, short-answer questions and topic-wise practice.</p>
+                    <span class="tag">Practice</span>
+                </article>
+
+                <article class="card resource-card coming-soon">
+                    <h3>Progress Tracking</h3>
+                    <p>Track completed topics, scores and accuracy – coming soon.</p>
+                    <span class="tag">Soon</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEARCH SECTION ========== -->
+    <section id="search" class="section">
+        <div class="container">
+            <h2 class="section-title">Find What You Need Fast</h2>
+            <p class="section-subtitle">
+                Filter by course, semester, subject and year to jump straight into the right PDF.
+            </p>
+
+            <form class="search-form">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="course">Course</label>
+                        <select id="course">
+                            <option value="">Select course</option>
+                            <option value="bca">BCA</option>
+                            <option value="bba">BBA</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="semester">Semester</label>
+                        <select id="semester">
+                            <option value="">Select semester</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text" placeholder="e.g., C Programming" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="year">Year</label>
+                        <select id="year">
+                            <option value="">Any year</option>
+                            <option>2025</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary search-btn">
+                    Search Resources
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== POPULAR SUBJECTS SECTION ========== -->
+    <section id="subjects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Popular Subjects</h2>
+            <p class="section-subtitle">
+                Quick access to subjects most students search right before exams.
+            </p>
+
+            <div class="subject-chips">
+                <button>C Programming</button>
+                <button>DBMS</button>
+                <button>Operating Systems</button>
+                <button>Accounting</button>
+                <button>Principles of Management</button>
+                <button>Business Communication</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>GradStack</h3>
+                <p>Smart exam preparation platform for BCA & BBA students.</p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#resources">PYQs</a></li>
+                    <li><a href="#resources">Notes</a></li>
+                    <li><a href="#resources">Practice</a></li>
+                    <li><a href="#search">Search</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Telegram (coming soon)</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 GradStack • Built for slow but faadu progress 🔥
+        </div>
+    </footer>
+    <script src="sidemenu.js"></script>
+</body>
+</html>
+
